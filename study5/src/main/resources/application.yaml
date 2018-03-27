@@ -1,0 +1,40 @@
+server:
+  port: 4530
+
+spring:
+  application:
+    name: bigGod
+  profiles:
+    active: dev
+  thymeleaf:
+    cache: false
+    encoding: 'UTF-8'
+    mode: 'HTML5'
+  datasource:
+    dialect: mysql
+    url: 'jdbc:mysql://172.20.10.15:3306/test?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&tinyInt1isBit=false&allowMultiQueries=true'
+    username: 'root'
+    password: 'root'
+    driver-class-name: 'com.mysql.jdbc.Driver'
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+mybatis:
+  mapper-locations: 'classpath*:/mapper/*.xml'
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:4523/eureka/
+  instance:
+    prefer-ip-address: true
+
+
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+

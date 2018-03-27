@@ -1,0 +1,13 @@
+server:
+  port: 4521
+
+spring:
+  profiles:
+    active: peer1
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    serviceUrl:
+      defaultZone: http://peer2:4522/eureka
+

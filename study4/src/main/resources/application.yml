@@ -1,0 +1,9 @@
+server:
+  port: 4520
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:4520/eureka/

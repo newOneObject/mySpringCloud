@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: Eureka-server-euthenticating
+server:
+  port: 4523
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+
+security:
+   basic:
+     enabled: true
+   user:
+    name: user
+    password: password123

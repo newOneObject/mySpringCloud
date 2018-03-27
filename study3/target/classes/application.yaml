@@ -1,0 +1,15 @@
+server:
+  port: 4545
+
+BIGGOD:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+eureka:
+  instance:
+    hostname: movie-server
+  client:
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:4523/eureka
+
+
